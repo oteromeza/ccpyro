@@ -10,11 +10,11 @@ authors:
   - family-names: "Otero Meza"
     given-names: "Daniel D."
     orcid: "https://orcid.org/0000-0003-2889-7895"
-    affiliation: "Facultad de Ingeniería, Universidad de Sucre, Sincelejo, Colombia"
+    affiliation: "INGEBIR Research Group, Faculty of Engineering, Universidad de Sucre, Sincelejo, Colombia"
   - family-names: "Arroyo Dagobeth"
     given-names: "Eduardo D."
     orcid: "https://orcid.org/0000-0003-1347-7732"
-    affiliation: "Facultad de Ingeniería, Universidad de Sucre, Sincelejo, Colombia"
+    affiliation: "INGEBIR Research Group, Faculty of Engineering, Universidad de Sucre, Sincelejo, Colombia"
 repository-code: "https://github.com/oteromeza/ccpyro"
 keywords:
   - pyrolysis
