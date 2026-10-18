@@ -1,0 +1,30 @@
+{
+  "title": "ccpyro: conservation-constrained estimation of pyrolysis products and tar composition",
+  "upload_type": "software",
+  "description": "Python package and Jupyter notebooks that estimate the yield and the elemental composition (CHxOy) of the tar released in biomass pyrolysis from routine measurements (thermogram, proximate and ultimate analyses and permanent-gas composition), with closed-form elimination of the C/H/O balances, admissibility constraints, profile-likelihood intervals at three levels of evidence, a CRECK benchmark and the energy balance of a small unit.",
+  "creators": [
+    {
+      "name": "Otero Meza, Daniel D.",
+      "affiliation": "Universidad de Sucre",
+      "orcid": "0000-0003-2889-7895"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "language": "eng",
+  "keywords": [
+    "pyrolysis",
+    "tar",
+    "data reconciliation",
+    "profile likelihood",
+    "identifiability"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22922087",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    }
+  ]
+}

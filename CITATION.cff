@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "ccpyro: conservation-constrained estimation of pyrolysis products and tar composition"
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: "Otero Meza"
+    given-names: "Daniel D."
+    orcid: "https://orcid.org/0000-0003-2889-7895"
+    affiliation: "Facultad de Ingeniería, Universidad de Sucre, Sincelejo, Colombia"
+repository-code: "https://github.com/oteromeza/ccpyro"
+keywords:
+  - pyrolysis
+  - tar
+  - data reconciliation
+  - profile likelihood
+  - identifiability

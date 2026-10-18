@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccpyro"
+version = "1.0.0"
+description = "Conservation-constrained estimation of biomass pyrolysis products and tar composition from routine measurements"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Daniel D. Otero Meza", email = "daniel.otero@unisucre.edu.co"}]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pandas>=2.0", "openpyxl>=3.1"]
+keywords = ["pyrolysis", "tar", "data reconciliation", "profile likelihood", "identifiability", "biomass"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+[project.optional-dependencies]
+notebooks = ["jupyterlab", "matplotlib", "nbconvert", "nbformat", "ipykernel"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ccpyro = ["data/*", "data/global/*"]

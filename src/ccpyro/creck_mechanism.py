@@ -1,0 +1,40 @@
+"""Multistep mechanism of biomass pyrolysis of Debiagi et al. (2018), J. Anal. Appl. Pyrolysis 134,
+326-335 (doi:10.1016/j.jaap.2018.06.022), Table 1, with the parameters of the CHEMKIN version of its
+supplementary material. Rate constant k = A * T**n * exp(-E / (R * T)), A in 1/s, E in cal/mol.
+Metaplastic species G{X} are named XS; G{COH2}Stiff is COH2S and G{COH2}Loose is CH2OS.
+"""
+
+REACTIONS = [
+    ("CELL", {"CELLA": 1}, 1.5e+14, 0, 47000),
+    ("CELLA", {"CH2OHCHO": 0.4, "CHOCHO": 0.03, "CH3CHO": 0.17, "C6H6O3": 0.25, "C2H5CHO": 0.35, "CH3OH": 0.2, "CH2O": 0.15, "CO": 0.49, "COS": 0.05, "CO2": 0.43, "H2": 0.13, "H2O": 0.93, "CH2OS": 0.05, "HCOOH": 0.02, "CH2OHCH2CHO": 0.05, "CH4": 0.05, "H2S": 0.1, "CHAR": 0.66}, 2.5e+06, 0, 19100),
+    ("CELLA", {"C6H10O5": 1}, 3.3, 1, 10000),
+    ("CELL", {"H2O": 4.45, "CHAR": 5.45, "COH2S": 0.12, "CH2OS": 0.18, "COS": 0.25, "H2S": 0.125, "H2": 0.125}, 9e+07, 0, 31000),
+    ("GMSW", {"HCE1": 0.7, "HCE2": 0.3}, 1e+10, 0, 31000),
+    ("XYHW", {"HCE1": 0.35, "HCE2": 0.65}, 1.25e+11, 0, 31400),
+    ("XYGR", {"HCE1": 0.12, "HCE2": 0.88}, 1.25e+11, 0, 30000),
+    ("HCE1", {"C5H8O4": 0.25, "C6H10O5": 0.25, "FURFURAL": 0.16, "C6H6O3": 0.13, "CO2": 0.09, "CH4": 0.1, "H2O": 0.54, "CH2OHCH2CHO": 0.06, "CHOCHO": 0.1, "H2": 0.02, "CHAR": 0.1}, 16, 1, 12900),
+    ("HCE1", {"H2O": 0.4, "CO2": 0.39, "HCOOH": 0.05, "CO": 0.49, "COS": 0.01, "CO2S": 0.51, "H2S": 0.05, "CH2O": 0.4, "CH2OS": 0.43, "CH4": 0.3, "CH4S": 0.325, "C2H4": 0.1, "C2H4S": 0.075, "CHAR": 0.975, "COH2S": 0.37, "H2": 0.1, "C2H6S": 0.2}, 0.003, 1, 3600),
+    ("HCE2", {"CO": 0.3, "CO2": 0.5125, "CH4": 0.1895, "H2": 0.5505, "H2O": 0.056, "C2H5OH": 0.049, "CH2OHCHO": 0.035, "CH3CO2H": 0.105, "HCOOH": 0.0175, "FURFURAL": 0.145, "CH4S": 0.05, "CH3OHS": 0.105, "C2H4S": 0.1, "CO2S": 0.45, "CH2OS": 0.18, "CHAR": 0.7125, "H2S": 0.21, "COH2S": 0.78, "C2H6S": 0.2}, 7e+09, 0, 30500),
+    ("LIGH", {"LIGOH": 1, "C2H5CHO": 0.5, "C2H4": 0.4, "CH2OHCHO": 0.2, "CO": 0.1, "C2H6": 0.1}, 6.7e+12, 0, 37500),
+    ("LIGO", {"LIGOH": 1, "CO2": 1}, 3.3e+08, 0, 25500),
+    ("LIGC", {"LIGCC": 0.35, "VANILLIN": 0.1, "C6H5OCH3": 0.1, "C2H4": 0.27, "H2O": 1, "CH2OS": 0.17, "COH2S": 0.4, "CH2O": 0.22, "CO": 0.21, "CO2": 0.1, "CH4S": 0.36, "CHAR": 5.85, "C2H6S": 0.2, "H2S": 0.1}, 1e+11, 0, 37200),
+    ("LIGCC", {"VANILLIN": 0.25, "CRESOL": 0.15, "C6H5OCH3": 0.15, "CH2OHCHO": 0.35, "H2O": 0.7, "CH4": 0.45, "C2H4": 0.3, "H2": 0.7, "CO": 1.15, "COS": 0.4, "CHAR": 6.8, "C2H6": 0.4}, 10000, 0, 24800),
+    ("LIGOH", {"LIG": 0.9, "H2O": 1, "CH4": 0.1, "CH3OH": 0.6, "CH3OHS": 0.3, "CO2": 0.05, "CO": 0.65, "COS": 0.6, "HCOOH": 0.05, "CH2OS": 0.45, "COH2S": 0.4, "CH4S": 0.25, "C2H4S": 0.1, "C2H6S": 0.15, "CHAR": 4.25, "C24H28O4": 0.025, "C2H3CHO": 0.1}, 1.5e+08, 0, 30000),
+    ("LIG", {"VANILLIN": 1, "C6H5OCH3": 0.1, "C2H4": 0.5, "CO": 0.6, "CH3CHO": 0.3, "CHAR": 0.1}, 4, 1, 12000),
+    ("LIG", {"H2O": 0.6, "CO": 0.3, "CO2": 0.1, "CH4": 0.2, "CH2O": 0.4, "COS": 0.2, "CH4S": 0.4, "C2H4S": 0.5, "CH3OHS": 0.4, "CH2OS": 1.25, "COH2S": 0.65, "CHAR": 6.1, "H2S": 0.1}, 0.083, 1, 8000),
+    ("LIG", {"H2O": 0.6, "CO": 2.6, "CH4": 0.6, "CH2O": 0.4, "C2H4": 0.75, "CH3OH": 0.4, "CHAR": 4.5, "C2H6": 0.5}, 1.5e+09, 0, 31500),
+    ("TGL", {"C2H3CHO": 1, "MLINO": 2.5, "U2ME12": 0.5}, 7e+12, 0, 45700),
+    ("TANN", {"C6H5OH": 0.85, "C6H5OHS": 0.15, "COS": 1, "H2O": 1, "ITANN": 1}, 20, 0, 10000),
+    ("ITANN", {"CHAR": 5, "CO": 2, "H2O": 1, "CH2OS": 0.55, "COH2S": 0.45}, 1000, 0, 25000),
+    ("CO2S", {"CO2": 1}, 1e+06, 0, 24500),
+    ("COS", {"CO": 1}, 5e+12, 0, 52500),
+    ("CH3OHS", {"CH3OH": 1}, 2e+12, 0, 50000),
+    ("CH2OS", {"CHAR": 0.8, "H2O": 0.8, "CO": 0.2, "H2": 0.2}, 6e+10, 0, 50000),
+    ("C2H6S", {"C2H6": 1}, 1e+11, 0, 52000),
+    ("CH4S", {"CH4": 1}, 1e+11, 0, 53000),
+    ("C2H4S", {"C2H4": 1}, 1e+11, 0, 54000),
+    ("C6H5OHS", {"C6H5OH": 1}, 1.5e+12, 0, 55000),
+    ("COH2S", {"CHAR": 0.2, "H2O": 0.2, "CO": 0.8, "H2": 0.8}, 1e+09, 0, 59000),
+    ("H2S", {"H2": 1}, 1.8e+08, 0, 70000),
+    ("ACQUA", {"H2O": 1}, 1, 1, 8000),
+]
