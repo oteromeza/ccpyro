@@ -1,5 +1,7 @@
 # ccpyro
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23460932.svg)](https://doi.org/10.5281/zenodo.23460932)
+
 Conservation-constrained estimation of the products of biomass pyrolysis and of the elemental composition
 (CH<sub>x</sub>O<sub>y</sub>) of the tar from routine measurements: the thermogram, the proximate and ultimate
 analyses and the composition of the permanent gas.
@@ -119,7 +121,8 @@ points the package to another data folder.
 
 ## How to cite
 
-See `CITATION.cff`. Please cite the article and the archived version of the software used.
+See `CITATION.cff`. Please cite the article and the archived version of the software used; version 1.0.0 is
+https://doi.org/10.5281/zenodo.23460932.
 
 ## License
 

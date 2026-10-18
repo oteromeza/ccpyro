@@ -3,11 +3,17 @@ message: "If you use this software, please cite it as below."
 type: software
 title: "ccpyro: conservation-constrained estimation of pyrolysis products and tar composition"
 version: 1.0.0
+doi: 10.5281/zenodo.23460932
+date-released: 2026-10-19
 license: MIT
 authors:
   - family-names: "Otero Meza"
     given-names: "Daniel D."
     orcid: "https://orcid.org/0000-0003-2889-7895"
+    affiliation: "Facultad de Ingeniería, Universidad de Sucre, Sincelejo, Colombia"
+  - family-names: "Arroyo Dagobeth"
+    given-names: "Eduardo D."
+    orcid: "https://orcid.org/0000-0003-1347-7732"
     affiliation: "Facultad de Ingeniería, Universidad de Sucre, Sincelejo, Colombia"
 repository-code: "https://github.com/oteromeza/ccpyro"
 keywords:
